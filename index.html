@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav_logo">
+        <img src="images/Circlixtech Logo-01.png" alt="CirclixTech Logo" />
+      </div>
+      <ul class="nav_links">
+        <li class="link"><a href="#">About</a></li>
+        <li class="link"><a href="#">Projects</a></li>
+        <li class="link"><a href="#">Founders</a></li>
+        <li class="link"><a href="#">Blogs</a></li>
+        <li class="link"><a href="#" class="contact_btn">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div class="header_container">
+        <div class="header_content">
+          <h1>We are a fully integrated digital agency.</h1>
+          <a href="#" class="start_project">Start a project</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container reveal">
+        <h2>About Us</h2>
+        <div class="cards">
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container reveal">
+        <h2>Contact Us</h2>
+        <div class="cards">
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container reveal">
+        <h2>Your Title</h2>
+        <div class="cards">
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+          <div class="text-card">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      window.addEventListener("scroll", reveal);
+
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        var scrollPosition = window.scrollY;
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var revealTop = reveals[i].getBoundingClientRect().top;
+          var revealPoint = 150;
+
+          if (
+            revealTop < windowHeight - revealPoint &&
+            revealTop > -reveals[i].offsetHeight
+          ) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
